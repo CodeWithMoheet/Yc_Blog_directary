@@ -18,12 +18,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
     <>
       <section className="pink_container">
         <h1 className="heading">
-          Pitch Your Startup, <br />
-          Connect With Entrepreneurs
+        The Ultimate Hub, <br />
+        for Startups & Thinkers
         </h1>
         <p className="sub-heading !max-w-3xl">
-          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual
-          Competitions.
+        A Blogging Platform for Entrepreneurs & Innovators
         </p>
 
         <SearchForm query={query} />
@@ -31,7 +30,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
 
       <section className="section_container">
         <p className="text-30-semibold">
-          {query ? `Search results for "${query}"` : "All Startups"}
+          {query ? `Search results for "${query}"` : "All Blogs"}
         </p>
         <ul className="mt-7 card_grid">
         {posts?.length > 0 ? (
@@ -39,7 +38,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
               <StartupCard key={post?._id} post={post} />
             ))
           ) : (
-            <p className="no-results">No startups found</p>
+            <p className="no-results">No blogs found</p>
           )}
         </ul>
       </section>
